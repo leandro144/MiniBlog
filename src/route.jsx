@@ -11,7 +11,7 @@ import PostDetails from './pages/PostDetails';
 
 const RouteConfig = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/'>
       <Navbar />
       <Routes>
         {/* Rotas abertas */}
