@@ -37,7 +37,7 @@ const Home = () => {
             {posts.map((listPost, index) => (
               <div key={listPost.id} style={{ width: '100%' }}>
                 <br />
-                <li style={{ padding: '20px', borderRadius: '8px', background:'#ccc', boxShadow: '0 2px 5px rgba(0,0,0,0.1)', width:'50%', margin: '0 auto',  overflow: 'hidden', maxHeight: '400px' }}>
+                <li style={{ padding: '20px', borderRadius: '8px', background:'#ccc', boxShadow: '0 2px 5px rgba(0,0,0,0.1)', width:'50%', margin: '0 auto' }}>
                   <h3 style={{ marginBottom: '10px' }}>{listPost.title}</h3>
                   <img src={listPost.urlImage} alt={listPost.title} style={{ width: '200px', height: 'auto', marginBottom: '10px' }} />
                   <p>{listPost.content}</p>
