@@ -33,7 +33,7 @@ const Home = () => {
         <p>Nenhum post encontrado.</p>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-          <ul style={{ padding: '0', width: '80%', listStyleType: 'none' }}>
+          <ul style={{ padding: '0', width: '80%', listStyleType: 'none', overflow: 'hidden', maxHeight: '400px' }}>
             {posts.map((listPost, index) => (
               <div key={listPost.id} style={{ width: '100%' }}>
                 <br />
