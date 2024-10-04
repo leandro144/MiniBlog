@@ -34,29 +34,16 @@ const Home = () => {
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
           <ul style={{ padding: '0', width: '80%', listStyleType: 'none' }}>
-            {posts.map((listPost) => (
+            {posts.map((listPost, index) => (
               <div key={listPost.id} style={{ width: '100%' }}>
                 <br />
-                <li style={{ 
-                  padding: '20px', 
-                  borderRadius: '8px', 
-                  background: '#ccc', 
-                  boxShadow: '0 2px 5px rgba(0,0,0,0.1)', 
-                  width: '50%', 
-                  margin: '0 auto',
-                  maxHeight: '200px', // Limita a altura do post
-                  overflow: 'hidden' // Esconde o conteúdo que ultrapassar a altura
-                }}>
+                <li style={{ padding: '20px', borderRadius: '8px', background:'#ccc', boxShadow: '0 2px 5px rgba(0,0,0,0.1)', width:'50%', margin: '0 auto',  overflow: 'hidden', maxHeight: '400px' }}>
                   <h3 style={{ marginBottom: '10px' }}>{listPost.title}</h3>
-                  <img 
-                    src={listPost.urlImage} 
-                    alt={listPost.title} 
-                    style={{ width: '200px', height: 'auto', marginBottom: '10px' }} 
-                  />
-                  <p style={{ maxHeight: '100px', overflow: 'hidden' }}>{listPost.content}</p> {/* Limita a altura do conteúdo */}
+                  <img src={listPost.urlImage} alt={listPost.title} style={{ width: '200px', height: 'auto', marginBottom: '10px' }} />
+                  <p>{listPost.content}</p>
                   <p style={{ fontStyle: 'italic' }}>Tags: {listPost.tags}</p>
                 </li>
-                <Divider style={{ color: '#fff' }} />
+               <Divider style={{color: '#fff'}} />
               </div>
             ))}
           </ul>
